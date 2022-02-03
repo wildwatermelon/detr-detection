@@ -1,0 +1,8 @@
+# IDEs and editors
+.idea/*
+
+# Files
+others/*
+outputs/*
+outputs100/*
+detr-r50_no-class-head.pth

@@ -12,7 +12,7 @@ model = torch.hub.load('facebookresearch/detr',
                        pretrained=False,
                        num_classes=num_classes)
 
-checkpoint = torch.load('outputs/checkpoint.pth',
+checkpoint = torch.load('outputs100ns/checkpoint.pth',
                         map_location='cpu')
 
 model.load_state_dict(checkpoint['model'],
@@ -65,7 +65,7 @@ def run_worflow(my_image, my_model):
 
 
 #img_name = 'D:/ITSS/balloon_dataset/balloon/train2017/145053828_e0e748717c_b.jpg'
-img_name = './final_test/Screenshot_1.jpg'
+img_name = './final_test/Screenshot_2.jpg'
 im = Image.open(img_name)
 
 run_worflow(im,model)

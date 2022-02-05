@@ -10,6 +10,7 @@ for keyword in ['train', 'val']:
   input_json = input_dir + 'via_region_data.json'
   categories = ['balloon']
   super_categories = ['N/A']
+  # can only be custom_train and custom_val, see detr/datasets/custom.py
   output_json = input_dir + 'custom_' + keyword + '.json'
 
   print('Converting {} from VIA format to COCO format'.format(input_json))

@@ -36,5 +36,8 @@ python setup.py install <br>
 ### tensorboard
 `python -m tensorboard.main --logdir='D:\ITSS\detr-detection\lightning_logs\version_0'`
 
+### remove segmentation
+remove segmentation from coco json
+
 ### nvidia-smi (check gpu)
 nvidia-smi

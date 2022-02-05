@@ -5,4 +5,5 @@
 # others/*
 outputs/*
 outputs100/*
+outputs100ns/*
 detr-r50_no-class-head.pth

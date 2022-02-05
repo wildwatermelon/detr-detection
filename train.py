@@ -15,3 +15,6 @@
 #
 # python3 ./detr/main.py --dataset_file "custom" --coco_path "./datasets/balloon" --output_dir "outputs100"
 # --resume "detr-r50_no-class-head.pth" --num_classes 1 --epochs 100
+#
+# python3 ./detr/main.py --dataset_file "custom" --coco_path "./datasets/balloon" --output_dir "outputs100ns"
+# --resume "detr-r50_no-class-head.pth" --num_classes 1 --epochs 100

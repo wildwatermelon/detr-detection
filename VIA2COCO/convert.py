@@ -148,6 +148,7 @@ def convert(
             max_y = max(points_y)
             box = [min_x, min_y, max_x - min_x, max_y - min_y]
             segmentation = get_segmenation(points_x, points_y)
+            segmentation = []
             # make annotations info and storage it in coco_output['annotations']
             ann_info = create_annotation_info(
                 ann_id, img_id, cat_id, iscrowd, area, box, segmentation

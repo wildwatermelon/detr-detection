@@ -26,7 +26,8 @@ print('Super-categories: {}'.format(nms))
 catIds = coco.getCatIds(catNms=['balloon'])
 imgIds = coco.getImgIds(catIds=catIds )
 
-img_id = imgIds[np.random.randint(0,len(imgIds))]
+#img_id = imgIds[np.random.randint(0,len(imgIds))]
+img_id = imgIds[0]
 print('Image n°{}'.format(img_id))
 
 img = coco.loadImgs(img_id)[0]

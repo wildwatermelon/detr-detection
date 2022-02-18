@@ -62,5 +62,9 @@ def plot_results(pil_img, prob=None, boxes=None):
           text = f'{CLASSES[cl]}: {p[cl]:0.2f}'
           ax.text(xmin, ymin, text, fontsize=15,
                   bbox=dict(facecolor='yellow', alpha=0.5))
-    plt.axis('off')
+
+          print('grids:' + str(xmin) + '-' + str(ymin) + '-' + text)
+          if CLASSES[cl] == 'dog':
+              print('dog spotted!')
+    # plt.axis('off')
     plt.show()

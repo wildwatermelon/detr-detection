@@ -12,7 +12,7 @@ model = torch.hub.load('facebookresearch/detr',
                        pretrained=False,
                        num_classes=num_classes)
 
-checkpoint = torch.load('outputs100ns/checkpoint.pth',
+checkpoint = torch.load('outputs100/checkpoint.pth',
                         map_location='cpu')
 
 model.load_state_dict(checkpoint['model'],
@@ -44,7 +44,9 @@ def plot_finetuned_results(pil_img, prob=None, boxes=None):
           text = f'{finetuned_classes[cl]}: {p[cl]:0.2f}'
           ax.text(xmin, ymin, text, fontsize=15,
                   bbox=dict(facecolor='yellow', alpha=0.5))
-    plt.axis('off')
+
+          print('grids:' + str(xmin) + '-' + str(ymin) + '-' + text)
+    # plt.axis('off')
     plt.show()
 
 
@@ -56,6 +58,7 @@ def run_worflow(my_image, my_model):
     outputs = my_model(img)
 
     for threshold in [0.9, 0.7, 0.5]:
+    # for threshold in [.995]:
         probas_to_keep, bboxes_scaled = helper.filter_bboxes_from_outputs(my_image, outputs,
                                                                    threshold=threshold)
 

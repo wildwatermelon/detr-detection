@@ -2,7 +2,7 @@ from detr.util.plot_utils import plot_logs
 
 from pathlib import Path
 
-log_directory = [Path('outputs100ns/')]
+log_directory = [Path('outputs100/')]
 
 fields_of_interest = (
     'loss',

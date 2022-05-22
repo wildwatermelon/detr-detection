@@ -1,3 +1,5 @@
+import random
+
 import torch
 import matplotlib.pyplot as plt
 import torchvision.transforms as T
@@ -47,6 +49,8 @@ def plot_finetuned_results(pil_img, prob=None, boxes=None):
 
           print('grids:' + str(xmin) + '-' + str(ymin) + '-' + text)
     # plt.axis('off')
+    hash = random.getrandbits(32)
+    plt.savefig('final_test_results/'+str(hash) + '_results.png')
     plt.show()
 
 
